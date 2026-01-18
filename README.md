@@ -354,11 +354,3 @@ python verify_setup.py
 Built with passion by **Team Functional Bits** for better financial literacy and smarter credit decisions.
 
 ---
-
-<div align="center">
-
-### Made with ❤️ by Team Functional Bits
-
-*Empowering smarter financial decisions, one simulation at a time.*
-
-</div>
