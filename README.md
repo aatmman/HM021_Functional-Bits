@@ -355,12 +355,6 @@ Built with passion by **Team Functional Bits** for better financial literacy and
 
 ---
 
-## 📄 License
-
-This project was built for **HM021 Hackathon**.
-
----
-
 <div align="center">
 
 ### Made with ❤️ by Team Functional Bits

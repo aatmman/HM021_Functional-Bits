@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Credit Decision Coach - NEON-DARK Premium Fintech Design System */
+/* High-contrast pastels on deep charcoal for modern fintech aesthetic */
+
+@layer base {
+  :root {
+    /* Deep Matte Charcoal Background */
+    --background: 240 10% 5%;
+    /* #0D0D10 */
+    --foreground: 0 0% 88%;
+    /* #E0E0E0 crisp light grey */
+
+    /* Card Surfaces - Slightly lighter dark grey */
+    --card: 230 8% 11%;
+    /* #1A1B20 */
+    --card-foreground: 0 0% 100%;
+    /* Pure white for card text */
+    --card-elevated: 230 8% 14%;
+    --card-hover: 230 8% 18%;
+
+    /* Popover */
+    --popover: 230 8% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Primary - Vibrant Purple */
+    --primary: 248 58% 60%;
+    /* #6C5DD3 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Dark surface */
+    --secondary: 230 8% 15%;
+    --secondary-foreground: 0 0% 88%;
+
+    /* Muted - Subtle backgrounds */
+    --muted: 230 8% 13%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Accent - Neon Teal */
+    --accent: 158 75% 55%;
+    /* #4CE5B1 */
+    --accent-foreground: 240 10% 5%;
+
+    /* Neon Color Palette */
+    --neon-purple: 248 58% 60%;
+    /* #6C5DD3 */
+    --neon-purple-light: 248 58% 70%;
+    /* #8F7EE5 */
+    --neon-teal: 158 75% 55%;
+    /* #4CE5B1 */
+    --neon-yellow: 43 100% 66%;
+    /* #FFCD54 */
+    --neon-coral: 24 100% 71%;
+    /* #FF9F6D */
+
+    /* Destructive - Coral/Salmon */
+    --destructive: 24 100% 71%;
+    /* #FF9F6D */
+    --destructive-foreground: 240 10% 5%;
+
+    /* Success - Neon Teal */
+    --success: 158 75% 55%;
+    /* #4CE5B1 */
+    --success-foreground: 240 10% 5%;
+
+    /* Warning - Mango Yellow */
+    --warning: 43 100% 66%;
+    /* #FFCD54 */
+    --warning-foreground: 240 10% 5%;
+
+    /* Border and inputs */
+    --border: 230 8% 20%;
+    --input: 230 8% 15%;
+    --ring: 248 58% 60%;
+
+    /* Large radius for bubble look */
+    --radius: 1.5rem;
+    /* 24px */
+
+    /* Sidebar */
+    --sidebar-background: 240 10% 4%;
+    --sidebar-foreground: 0 0% 60%;
+    --sidebar-primary: 248 58% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 8% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 8% 15%;
+    --sidebar-ring: 248 58% 60%;
+
+    /* Chart colors - Neon palette */
+    --chart-1: 248 58% 60%;
+    /* Purple */
+    --chart-2: 158 75% 55%;
+    /* Teal */
+    --chart-3: 43 100% 66%;
+    /* Yellow */
+    --chart-4: 24 100% 71%;
+    /* Coral */
+    --chart-5: 280 60% 65%;
+    /* Violet */
+  }
+
+  .dark {
+    --background: 240 10% 5%;
+    --foreground: 0 0% 88%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply tracking-tight;
+    color: #FFFFFF;
+  }
+}
+
+@layer components {
+
+  /* Premium display numbers */
+  .display-number {
+    font-family: 'Poppins', sans-serif;
+    @apply text-5xl font-bold tracking-tight;
+    color: #FFFFFF;
+  }
+
+  .display-number-lg {
+    font-family: 'Poppins', sans-serif;
+    @apply text-6xl md:text-7xl font-bold tracking-tight;
+    color: #FFFFFF;
+  }
+
+  .display-number-sm {
+    font-family: 'Poppins', sans-serif;
+    @apply text-3xl font-bold tracking-tight;
+    color: #FFFFFF;
+  }
+
+  .display-number-xs {
+    font-family: 'Poppins', sans-serif;
+    @apply text-2xl font-bold tracking-tight;
+    color: #FFFFFF;
+  }
+
+  /* Subtle label styling */
+  .label-subtle {
+    @apply text-xs font-medium uppercase tracking-widest text-muted-foreground;
+  }
+
+  /* ================================================ */
+  /* NEON-DARK CARD STYLES - MODERN FINTECH */
+  /* ================================================ */
+
+  .card-premium {
+    @apply rounded-[24px] p-6 transition-all duration-300;
+    background: #1A1B20;
+    box-shadow:
+      0 4px 24px -4px rgba(0, 0, 0, 0.5),
+      0 8px 48px -8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .card-premium:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px -4px rgba(0, 0, 0, 0.6),
+      0 16px 64px -8px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Stat card - dark surface */
+  .card-stat {
+    @apply rounded-[24px] p-6 transition-all duration-300;
+    background: #1A1B20;
+    box-shadow:
+      0 4px 24px -4px rgba(0, 0, 0, 0.5),
+      0 8px 48px -8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .card-stat:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px -4px rgba(0, 0, 0, 0.6),
+      0 16px 64px -8px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* ================================================ */
+  /* NEON ACCENT CARDS - VIBRANT FINTECH COLORS */
+  /* ================================================ */
+
+  /* Purple Card - Primary accent #6C5DD3 */
+  .card-purple {
+    @apply rounded-[24px] p-6 transition-all duration-300;
+    background: linear-gradient(135deg, #6C5DD3 0%, #8F7EE5 100%);
+    box-shadow:
+      0 4px 24px -4px rgba(108, 93, 211, 0.4),
+      0 8px 48px -8px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+
+  .card-purple:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px -4px rgba(108, 93, 211, 0.5),
+      0 16px 64px -8px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Amber Card - Yellow accent #FFCD54 */
+  .card-amber {
+    @apply rounded-[24px] p-6 transition-all duration-300;
+    background: #1A1B20;
+    box-shadow:
+      0 4px 24px -4px rgba(255, 205, 84, 0.15),
+      0 8px 48px -8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 205, 84, 0.2);
+  }
+
+  .card-amber:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px -4px rgba(255, 205, 84, 0.25),
+      0 16px 64px -8px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 205, 84, 0.35);
+  }
+
+  /* Teal Card - Neon Teal #4CE5B1 */
+  .card-teal {
+    @apply rounded-[24px] p-6 transition-all duration-300;
+    background: #1A1B20;
+    box-shadow:
+      0 4px 24px -4px rgba(76, 229, 177, 0.15),
+      0 8px 48px -8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(76, 229, 177, 0.2);
+  }
+
+  .card-teal:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px -4px rgba(76, 229, 177, 0.25),
+      0 16px 64px -8px rgba(0, 0, 0, 0.5);
+    border-color: rgba(76, 229, 177, 0.35);
+  }
+
+  /* Green Card - Neon Teal for positive */
+  .card-green {
+    @apply rounded-[24px] p-6 transition-all duration-300;
+    background: #1A1B20;
+    box-shadow:
+      0 4px 24px -4px rgba(76, 229, 177, 0.15),
+      0 8px 48px -8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(76, 229, 177, 0.2);
+  }
+
+  .card-green:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px -4px rgba(76, 229, 177, 0.25),
+      0 16px 64px -8px rgba(0, 0, 0, 0.5);
+    border-color: rgba(76, 229, 177, 0.35);
+  }
+
+  /* Coral Card - Salmon/Coral #FF9F6D */
+  .card-coral {
+    @apply rounded-[24px] p-6 transition-all duration-300;
+    background: #1A1B20;
+    box-shadow:
+      0 4px 24px -4px rgba(255, 159, 109, 0.15),
+      0 8px 48px -8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 159, 109, 0.2);
+  }
+
+  .card-coral:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px -4px rgba(255, 159, 109, 0.25),
+      0 16px 64px -8px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 159, 109, 0.35);
+  }
+
+  /* ================================================ */
+  /* PILL BADGES - NEON ACCENTS */
+  /* ================================================ */
+
+  .badge-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-risk-low {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold;
+    background: rgba(76, 229, 177, 0.15);
+    color: #4CE5B1;
+    border: 1px solid rgba(76, 229, 177, 0.3);
+  }
+
+  .badge-risk-medium {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold;
+    background: rgba(255, 205, 84, 0.15);
+    color: #FFCD54;
+    border: 1px solid rgba(255, 205, 84, 0.3);
+  }
+
+  .badge-risk-high {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold;
+    background: rgba(255, 159, 109, 0.15);
+    color: #FF9F6D;
+    border: 1px solid rgba(255, 159, 109, 0.3);
+  }
+
+  /* Trend indicators - Pill style */
+  .trend-up {
+    @apply inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold;
+    background: linear-gradient(135deg, hsl(150 45% 50% / 0.2) 0%, hsl(150 45% 50% / 0.1) 100%);
+    color: hsl(150 45% 60%);
+    border: 1px solid hsl(150 45% 50% / 0.3);
+  }
+
+  .trend-down {
+    @apply inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold;
+    background: linear-gradient(135deg, hsl(8 65% 50% / 0.2) 0%, hsl(8 65% 50% / 0.1) 100%);
+    color: hsl(8 65% 60%);
+    border: 1px solid hsl(8 65% 50% / 0.3);
+  }
+
+  /* ================================================ */
+  /* PREMIUM INPUTS - ROUNDED & SOFT */
+  /* ================================================ */
+
+  .input-premium {
+    @apply w-full rounded-2xl px-5 py-4 text-foreground placeholder:text-muted-foreground transition-all duration-300;
+    background: linear-gradient(145deg, hsl(150 8% 13%) 0%, hsl(150 6% 10%) 100%);
+    border: 1px solid hsl(150 15% 22%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .input-premium:focus {
+    @apply outline-none;
+    border-color: hsl(150 40% 55%);
+    box-shadow:
+      inset 0 2px 4px rgba(0, 0, 0, 0.2),
+      0 0 0 3px hsl(150 40% 55% / 0.15);
+  }
+
+  /* ================================================ */
+  /* SIDEBAR NAVIGATION */
+  /* ================================================ */
+
+  .nav-item {
+    @apply flex items-center justify-center rounded-2xl transition-all duration-300;
+  }
+
+  .nav-item:hover {
+    background: linear-gradient(145deg, hsl(150 8% 14%) 0%, hsl(150 6% 11%) 100%);
+  }
+
+  .nav-item.active {
+    background: linear-gradient(145deg, hsl(150 40% 55% / 0.15) 0%, hsl(150 40% 55% / 0.1) 100%);
+    color: hsl(150 40% 65%);
+  }
+
+  /* Circular icon container */
+  .icon-circle {
+    @apply flex items-center justify-center rounded-full transition-all duration-300;
+    background: linear-gradient(145deg, hsl(150 8% 16%) 0%, hsl(150 6% 12%) 100%);
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.03);
+  }
+
+  /* ================================================ */
+  /* BUTTONS - PILL STYLE */
+  /* ================================================ */
+
+  .btn-pill {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300;
+  }
+
+  .btn-pill-primary {
+    @apply btn-pill;
+    background: linear-gradient(135deg, hsl(28 85% 52%) 0%, hsl(25 80% 45%) 100%);
+    color: hsl(20 8% 6%);
+    box-shadow:
+      0 4px 16px -4px hsl(28 85% 52% / 0.4),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-pill-primary:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 6px 24px -4px hsl(28 85% 52% / 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulseSoft {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* Gradient text */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(28 85% 55%) 0%, hsl(38 85% 55%) 100%);
+  }
+
+  /* Glass effect - premium */
+  .glass-premium {
+    background: linear-gradient(145deg,
+        hsl(25 10% 12% / 0.9) 0%,
+        hsl(25 10% 10% / 0.95) 100%);
+    backdrop-filter: blur(24px);
+    border: 1px solid hsl(25 10% 18% / 0.5);
+  }
+}
