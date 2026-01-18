@@ -13,7 +13,7 @@ from app.core.config import settings
 # HTTP Bearer scheme for token extraction
 security = HTTPBearer(auto_error=False)
 
-
+#Hash Function 
 def hash_password(password: str) -> str:
     """Hash a password for storing using bcrypt directly."""
     if not password:
