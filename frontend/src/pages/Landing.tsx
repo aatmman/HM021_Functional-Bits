@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 import { 
   TrendingUp, 
   ArrowRight, 
@@ -10,7 +11,7 @@ import {
   ChevronRight,
   CheckCircle2
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+
 
 const Landing = () => {
   const features = [
