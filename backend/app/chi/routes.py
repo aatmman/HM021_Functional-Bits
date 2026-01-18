@@ -11,7 +11,7 @@ from typing import Optional
 
 router = APIRouter(prefix="/api/chi", tags=["Credit Health Index"])
 
-
+# get_current_user_id function 
 def get_current_user_id(authorization: Optional[str]) -> str:
     """Extract user ID from authorization header."""
     if not authorization:
